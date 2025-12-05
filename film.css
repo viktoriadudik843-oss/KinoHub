@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(229, 44%, 93%));
+  color: white;
+  overflow-x: hidden;
+}
+
+
+/* ===== СИНЯ ПАНЕЛЬ ===== */
+
+.movie-info {
+  width: 85%;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #2E1C6D, #ACABB2);
+  padding: 40px 45px;
+  border-radius: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  position: relative;
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.45),
+    inset 0 0 20px rgba(255,255,255,0.08);
+}
+
+
+/* ===== НАЗВА ===== */
+
+.movie-title {
+  width: 100%;
+  text-align: left;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 25px;
+  color: #ffffff;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+
+/* ===== ПОСТЕР ===== */
+
+.poster img {
+  width: 260px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+
+
+/* ===== ДЕТАЛІ (Рік, Жанр…) ===== */
+
+.details {
+  flex: 1;
+  min-width: 320px;
+  margin-top: 100px;
+}
+
+
+.details ul {
+  list-style: none;
+  padding: 0;
+  font-size: 19px;
+  line-height: 1.45;
+}
+
+.details li strong {
+  color: #dbe2ff;
+  font-size: 20px;
+}
+
+
+/* ===== СЮЖЕТ ===== */
+
+.synopsis {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.synopsis h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #e0e5ff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.synopsis p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #f5f6ff;
+  opacity: 0.95;
+}
+
+
+/* ===== КНОПКИ ===== */
+
+.actions {
+  position: absolute;
+  right: 45px;
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.actions button {
+  padding: 14px 28px;
+  font-size: 17px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+
+  background: #3e54c7;
+  color: #ffffff;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  transition: 0.25s ease;
+}
+
+.actions button:hover {
+  background: #536aec;
+  transform: translateY(-3px);
+}
+
+
+/* --- Новий контейнер для центрування відео та заголовка (потрібен в HTML) --- */
+/* Припустимо, ви обернули ваш відео та заголовок у <div class="video-container">...</div> */
+
+.video-container {
+  width: 85%; /* Ширина, як і у .movie-info, для центрування */
+  margin: 0 auto;
+  text-align: center; /* Центрує вбудовані елементи (якщо не задано display: block) */
+}
+
+
+/* ===== ВІДЕО (Задаємо фіксовану ширину, щоб її успадкував заголовок) ===== */
+
+video {
+  /* Задаємо фіксовану ширину, щоб '.trailer-title' міг її успадкувати */
+  width: 900px; 
+  max-width: 100%; /* Забезпечуємо адаптивність */
+
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  margin-top: 30px;
+  /* Для центрування, якщо відео має фіксовану ширину */
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ===== ЗАГОЛОВОК ТРЕЙЛЕРА (ЗМІНЕНО: тепер прикріплений до відео і має його ширину) ===== */
+
+.trailer-title {
+  /* Ширина 900px, як у <video>, або 100% від батьківського елемента */
+  width: 900px; 
+  max-width: 100%; /* Забезпечуємо адаптивність */
+  
+  /* Змінено: Прибираємо великі зовнішні відступи */
+  margin: 40px auto 0; 
+  
+  /* Для центрування */
+  display: block; 
+  
+  background: linear-gradient(135deg, #23346e, #2b4cb0);
+  padding: 12px 0;
+  border-radius: 14px 14px 0 0; /* Закруглені кути тільки зверху, щоб "приклеїти" до відео */
+
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3),
+              inset 0 0 12px rgba(255,255,255,0.08);
+}  
+
+/* ===== ФУТЕР ===== */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #c9c9d2;
+}

@@ -1,0 +1,262 @@
+/* Загальні стилі */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Хедер */
+.header {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(to right, lch(8.95% 32.4 301.17), hsl(246, 30%, 44%), #7973a4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Логотип */
+.logo {
+    height: 150px; 
+    margin-top: 70px;
+    margin-right: 200px
+}
+
+
+/* переглянути пізніше і переглянуто*/
+.header-menu {
+    display: flex;
+    gap: 100px;
+    margin-right: 300px;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #9ed0e6;
+    color: #000;
+}
+
+/* Декоративні елементи */
+.header-decor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    object-fit: cover;
+}
+
+.header-icon {
+    height: 40px;
+}
+
+
+.search-section {
+    margin-bottom: 20px;
+     text-align: left;
+
+}
+
+.search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 250px;
+    margin-right: 200px;
+
+}
+
+
+/* Авторизація */
+.login-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-icon {
+    height: 40px;
+}
+
+.login-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/*сьогодні в кіно*/
+.cinema-today {
+  display: flex;               /* робить елементи в ряд */
+    flex-wrap: wrap;             /* переносить, якщо не влазить */
+    gap: -6px;  
+    
+}
+
+/* Список фільмів — В РЯДОК */
+.movie-list {
+    display: flex;               
+    flex-wrap: wrap;             
+    gap: 0px;                   
+}
+
+/* Картка фільму */
+.movie-card, .movie-item {
+    text-align: center;
+    width: 150px;                /* фіксована ширина */
+    transition: transform 0.3s;
+}
+
+.movie-card img, .movie-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Ефект при наведенні */
+.movie-card:hover, .movie-item:hover {
+    transform: scale(1.05);
+}
+
+/* Підпис під фільмом */
+figcaption, .movie-item h2 {
+    font-size: 16px;
+    color: #ddd;
+    margin-top: 8px;
+}
+
+/*популярне зараз*/
+
+.movie-card {
+  flex: 0 0 auto;
+  width: 160px;
+  scroll-snap-align: start;
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative; /* дозволяє позиціонувати .rank всередині */
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover img {
+  transform: scale(1.05);
+}
+
+.rank {
+  position: absolute;
+  bottom: 60px; /* було 8px — тепер вище */
+  left: 8px;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+
+
+.movie-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap; /* дозволяє переносити фільми на новий рядок, якщо не вміщаються */
+  gap: 5px; /* відстань між картками */
+ /* вирівнювання по центру */
+  padding: 20px;
+}
+
+.movie-card {
+  width: 160px; /* фіксована ширина картки */
+  text-align: center;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px; /* менший базовий розмір */
+  color: hwb(0 100% 0%);
+
+}
+
+/*карусель комедії/романтика   трилери   бойовики */
+.section {
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.movie-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+.movie-card {
+  flex: 0 0 auto;
+  width: 160px;
+  scroll-snap-align: start;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover img {
+  transform: scale(1.05);
+}
+
+.movie-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.movie-carousel::-webkit-scrollbar {
+  display: none;
+}
+.movie-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
