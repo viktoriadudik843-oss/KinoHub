@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinoHub - Головна</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+    
+<header class="header">
+    <img src="images/логотип для сайту пр 1.png" alt="KinoHub" class="logo">
+
+    <nav class="header-menu">
+        <div class="menu-tab active" id="tab-later" data-tab="later">Переглянути пізніше</div>
+        <div class="menu-tab" id="tab-watched" data-tab="watched">Переглянуто</div>
+    </nav>
+
+    
+
+    <div class="search-section">
+        <input type="text" class="search-input" placeholder="Пошук...">
+    </div>
+</header>
+
+<!-- Вкладки -->
+<section class="tab-content-container">
+    <div id="later-content" class="tab-content-item">
+        <button class="close-btn">✖</button>
+        <h2>Переглянути пізніше</h2>
+        <ul id="later-list"></ul>
+    </div>
+    <div id="watched-content" class="tab-content-item">
+        <button class="close-btn">✖</button>
+        <h2>Переглянуто</h2>
+        <ul id="watched-list"></ul>
+    </div>
+</section>
+
+
+
+
+<main id="main-content-sections">
+
+<section class="section popular">
+    <h1 class="section-title">Популярне зараз</h1>
+
+    <div class="movie-carousel">
+        <div class="movie-card" data-id="pop-1" data-title="Венздей" data-url="посилання на Венздей.html">
+            <img src="images/image 1.png" alt="Венздей">
+            <p><span class="rank">1</span> Венздей</p>
+        </div>
+
+        <div class="movie-card" data-id="pop-2" data-title="Чудовисько" data-url="посилання на Чудовисько.html">
+            <img src="images/image 2.png" alt="Чудовисько">
+            <p><span class="rank">2</span> Чудовисько</p>
+        </div>
+
+        <div class="movie-card" data-id="pop-3" data-title="Бункер" data-url="посилання на Бункер.html">
+            <img src="images/image 3.png" alt="Бункер">
+            <p><span class="rank">3</span> Бункер</p>
+        </div>
+
+        <div class="movie-card" data-id="pop-4" data-title="Жінка з каюти №10" data-url="посилання на Жінка з каюти №10.html">
+            <img src="images/image 4.png" alt="Жінка з каюти №10">
+            <p><span class="rank">4</span> Жінка з каюти №10</p>
+        </div>
+
+        <div class="movie-card" data-id="pop-5" data-title="Дім Гіннесів" data-url="посилання на Дім Гіннесів.html">
+            <img src="images/image 5.png" alt="Дім Гіннесів">
+            <p><span class="rank">5</span> Дім Гіннесів</p>
+        </div>
+
+        <div class="movie-card" data-id="pop-6" data-title="Французький коханець" data-url="посилання на Французький коханець.html">
+            <img src="images/image 6.png" alt="Французький коханець">
+            <p><span class="rank">6</span> Французький коханець</p>
+        </div>
+
+        <div class="movie-card" data-id="pop-7" data-title="Гра в кальмара 3" data-url="посилання на Гра в кальмара 3.html">
+            <img src="images/image 7.png" alt="Гра в кальмара">
+            <p><span class="rank">7</span> Гра в кальмара 3</p>
+        </div>
+
+        <div class="movie-card" data-id="pop-8" data-title="Кейпоп-мисливиці на демонів" data-url="посилання на Кейпоп-мисливиці на демонів.html">
+            <img src="images/image 8.png" alt="Кейпоп-мисливиці на демонів">
+            <p><span class="rank">8</span> Кейпоп-мисливиці на демонів</p>
+        </div>
+
+        <div class="movie-card" data-id="pop-9" data-title="Спустошення" data-url="посилання на Спустошення.html">
+            <img src="images/image 9.png" alt="Спустошення">
+            <p><span class="rank">9</span> Спустошення</p>
+        </div>
+
+        <div class="movie-card" data-id="pop-10" data-title="Клуб убивств по четвергах" data-url="посилання на Клуб убивств по четвергах.html">
+            <img src="images/image 10.png" alt="Клуб убивств по четвергах">
+            <p><span class="rank">10</span> Клуб убивств по четвергах</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="section today">
+    <h1 class="section-title">Сьогодні в кіно</h1>
+
+    <div class="cinema-today">
+        <div class="movie-carousel">
+            <figure class="movie-card" data-id="today-1" data-title="Незламний" data-url="Незламний.html"><img src="images/image 12.png" alt=""><figcaption>Незламний</figcaption></figure>
+            <figure class="movie-card" data-id="today-2" data-title="Трон" data-url="Трон.html"><img src="images/image 14.png" alt=""><figcaption>Трон</figcaption></figure>
+            <figure class="movie-card" data-id="today-3" data-title="Хороший хлопчик" data-url="Хороший хлопчик.html"><img src="images/image 13.png" alt=""><figcaption>Хороший хлопчик</figcaption></figure>
+            <figure class="movie-card" data-id="today-4" data-title="Аферисти" data-url="Аферисти.html"><img src="images/image 15.png" alt=""><figcaption>Аферисти</figcaption></figure>
+            <figure class="movie-card" data-id="today-5" data-title="Закоханий брехун" data-url="Закоханий брехун.html"><img src="images/image 16.png" alt=""><figcaption>Закоханий брехун</figcaption></figure>
+            <figure class="movie-card" data-id="today-6" data-title="Друге дихання" data-url="Друге дихання.html"><img src="images/image 43.png" alt=""><figcaption>Друге дихання</figcaption></figure>
+        </div>
+    </div>
+</section>
+
+
+<section class="section comedy">
+    <h1 class="section-title">Комедії / Романтичні</h1>
+
+    <div class="movie-carousel">
+
+        <div class="movie-card" data-id="com-1" data-title="Коли ти вийдеш заміж?" data-url="Коли ти вийдеш заміж.html">
+            <a href="Коли ти вийдеш заміж.html">
+                <img src="images/image 18.png" alt="Коли ти вийдеш заміж?">
+            </a>
+            <p>Коли ти вийдеш заміж?</p>
+        </div>
+
+        <div class="movie-card" data-id="com-2" data-title="Глибоке прикриття" data-url="Глибоке прикриття.html">
+            <a href="Глибоке прикриття.html">
+                <img src="images/image 19.png" alt="Глибоке прикриття">
+            </a>
+            <p>Глибоке прикриття</p>
+        </div>
+
+        <div class="movie-card" data-id="com-3" data-title="Борат 2" data-url="Борат 2.html">
+            <a href="Борат 2.html">
+                <img src="images/image 42.png" alt="Борат 2">
+            </a>
+            <p>Борат 2</p>
+        </div>
+
+        <div class="movie-card" data-id="com-4" data-title="Велика прогулянка" data-url="Велика прогулянка.html">
+            <a href="Велика прогулянка.html">
+                <img src="images/image 21.png" alt="Велика прогулянка">
+            </a>
+            <p>Велика прогулянка</p>
+        </div>
+
+        <div class="movie-card" data-id="com-5" data-title="Третій зайвий" data-url="Третій зайвий.html">
+            <a href="Третій зайвий.html">
+                <img src="images/image 22.png" alt="Третій зайвий">
+            </a>
+            <p>Третій зайвий</p>
+        </div>
+
+        <div class="movie-card" data-id="com-6" data-title="Хороші хлопці" data-url="Хороші хлопці.html">
+            <a href="Хороші хлопці.html">
+                <img src="images/image 23.png" alt="Хороші хлопці">
+            </a>
+            <p>Хороші хлопці</p>
+        </div>
+
+        <div class="movie-card" data-id="com-7" data-title="Люблю тебе ненавидіти" data-url="Люблю тебе ненавидіти.html">
+            <a href="Люблю тебе ненавидіти.html">
+                <img src="images/image 24.png" alt="Люблю тебе ненавидіти">
+            </a>
+            <p>Люблю тебе ненавидіти</p>
+        </div>
+
+        <div class="movie-card" data-id="com-8" data-title="Приватний курорт" data-url="Приватний курорт.html">
+            <a href="Приватний курорт.html">
+                <img src="images/image 25.png" alt="Приватний курорт">
+            </a>
+            <p>Приватний курорт</p>
+        </div>
+        <div class="movie-card" data-id="com-9" data-title="Наша маленька таємниця" data-url="Наша маленька таємниця.html">
+            <a href="Наша маленька таємниця.html">
+                <img src="images/image 26.png" alt="Наша маленька таємниця">
+            </a>
+            <p>Наша маленька таємниця</p>
+        </div>
+
+        <div class="movie-card" data-id="com-10" data-title="Божевільне весілля" data-url="Божевільне весілля.html">
+            <a href="Божевільне весілля.html">
+                <img src="images/image 27.png" alt="Божевільне весілля">
+            </a>
+            <p>Божевільне весілля</p>
+        </div>
+
+        <div class="movie-card" data-id="com-11" data-title="Кохання та інші ліки" data-url="Кохання та інші ліки.html">
+            <a href="Кохання та інші ліки.html">
+                <img src="images/image 28.png" alt="Кохання та інші ліки">
+            </a>
+            <p>Кохання та інші ліки</p>
+        </div>
+
+        <div class="movie-card" data-id="com-12" data-title="Грабіжник" data-url="Грабіжник.html">
+            <a href="Грабіжник.html">
+                <img src="images/image 79.png" alt="Грабіжник">
+            </a>
+            <p>Грабіжник</p>
+        </div>
+
+        <div class="movie-card" data-id="com-13" data-title="Нянь" data-url="Нянь.html">
+            <a href="Нянь.html">
+                <img src="images/image 80.png" alt="Нянь">
+            </a>
+            <p>Нянь</p>
+        </div>
+
+        <div class="movie-card" data-id="com-14" data-title="Найкращі вихідні" data-url="Найкращі вихідні.html">
+            <a href="Найкращі вихідні.html">
+                <img src="images/image 81.png" alt="Найкращі вихідні">
+            </a>
+            <p>Найкращі вихідні</p>
+        </div>
+
+        <div class="movie-card" data-id="com-15" data-title="Однокласники" data-url="Однокласники.html">
+            <a href="Однокласники.html">
+                <img src="images/image 82.png" alt="Однокласники">
+            </a>
+            <p>Однокласники</p>
+        </div>
+
+        <div class="movie-card" data-id="com-16" data-title="Думка про тебе" data-url="Думка про тебе.html">
+            <a href="Думка про тебе.html">
+                <img src="images/image 83.png" alt="Думка про тебе">
+            </a>
+            <p>Думка про тебе</p>
+        </div>
+
+        <div class="movie-card" data-id="com-17" data-title="Секс і нічого особистого" data-url="Секс і нічого особистого.html">
+            <a href="Секс і нічого особистого.html">
+                <img src="images/image 84.png" alt="Секс і нічого особистого">
+            </a>
+            <p>Секс і нічого особистого</p>
+        </div>
+
+        <div class="movie-card" data-id="com-18" data-title="Я, “Побєда” і Берлін" data-url="Я, Побєда і Берлін.html">
+            <a href="Я, Побєда і Берлін.html">
+                <img src="images/image 85.png" alt="Я, Побєда і Берлін">
+            </a>
+            <p>Я, “Побєда” і Берлін</p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section horror">
+    <h1 class="section-title">Трилери / Жахи</h1>
+
+    <div class="movie-carousel">
+
+        <div class="movie-card" data-id="hor-1" data-title="Проклята діва" data-url="Проклята діва.html">
+            <a href="Проклята діва.html"><img src="images/image 44.png" alt=""></a>
+            <p>Проклята діва</p>
+        </div>
+
+        <div class="movie-card" data-id="hor-2" data-title="Дзвінок" data-url="Дзвінок.html">
+            <a href="Дзвінок.html"><img src="images/image 45.png" alt=""></a>
+            <p>Дзвінок</p>
+        </div>
+
+        <div class="movie-card" data-id="hor-3" data-title="Астрал 3" data-url="Астрал 3.html">
+            <a href="Астрал 3.html"><img src="images/image 46.png" alt=""></a>
+            <p>Астрал 3</p>
+        </div>
+
+        <div class="movie-card" data-id="hor-4" data-title="Палата" data-url="Палата.html">
+            <a href="Палата.html"><img src="images/image 47.png" alt=""></a>
+            <p>Палата</p>
+        </div>
+
+        <div class="movie-card" data-id="hor-5" data-title="Дзеркала" data-url="Дзеркала.html">
+            <a href="Дзеркала.html"><img src="images/image 48.png" alt=""></a>
+            <p>Дзеркала</p>
+        </div>
+
+        <div class="movie-card" data-id="hor-6" data-title="Воно" data-url="Воно.html">
+            <a href="Воно.html"><img src="images/image 49.png" alt=""></a>
+            <p>Воно</p>
+        </div>
+
+        <div class="movie-card" data-id="hor-7" data-title="Анабель" data-url="Анабель.html">
+            <a href="Анабель.html"><img src="images/image 50.png" alt=""></a>
+            <p>Анабель</p>
+        </div>
+
+        <div class="movie-card" data-id="hor-8" data-title="Прокляття" data-url="Прокляття.html">
+            <a href="Прокляття.html"><img src="images/image 51.png" alt=""></a>
+            <p>Прокляття</p>
+        </div>
+
+        <div class="movie-card" data-id="hor-9" data-title="13 життів" data-url="13 життів.html">
+            <a href="13 життів.html"><img src="images/image 52.png" alt=""></a>
+            <p>13 життів</p>
+        </div>
+
+        <div class="movie-card" data-id="hor-10" data-title="Втеча" data-url="Втеча.html">
+            <a href="Втеча.html"><img src="images/image 53.png" alt=""></a>
+            <p>Втеча</p>
+        </div>
+
+        <div class="movie-card" data-id="hor-11" data-title="Анатомія" data-url="Анатомія.html">
+            <a href="Анатомія.html"><img src="images/image 54.png" alt=""></a>
+            <p>Анатомія</p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section action">
+    <h1 class="section-title">Бойовики</h1>
+
+    <div class="movie-carousel">
+
+        <div class="movie-card" data-id="act-1" data-title="Матриця" data-url="Матриця.html">
+            <a href="Матриця.html"><img src="images/image 63.png" alt=""></a>
+            <p>Матриця</p>
+        </div>
+
+        <div class="movie-card" data-id="act-2" data-title="Злочинець" data-url="Злочинець.html">
+            <a href="Злочинець.html"><img src="images/image 64.png" alt=""></a>
+            <p>Злочинець</p>
+        </div>
+
+        <div class="movie-card" data-id="act-3" data-title="Інтернаціонал" data-url="Інтернаціональність.html">
+            <a href="Інтернаціональність.html"><img src="images/image 65.png" alt=""></a>
+            <p>Інтернаціонал</p>
+        </div>
+
+        <div class="movie-card" data-id="act-4" data-title="Супер" data-url="Супер.html">
+            <a href="Супер.html"><img src="images/image 66.png" alt=""></a>
+            <p>Супер</p>
+        </div>
+
+        <div class="movie-card" data-id="act-5" data-title="Бойові дії" data-url="Бойові дії.html">
+            <a href="Бойові дії.html"><img src="images/image 67.png" alt=""></a>
+            <p>Бойові дії</p>
+        </div>
+
+        <div class="movie-card" data-id="act-6" data-title="Аматор" data-url="Аматор.html">
+            <a href="Аматор.html"><img src="images/image 68.png" alt=""></a>
+            <p>Аматор</p>
+        </div>
+
+        <div class="movie-card" data-id="act-7" data-title="Контратака" data-url="Контратака.html">
+            <a href="Контратака.html"><img src="images/image 69.png" alt=""></a>
+            <p>Контратака</p>
+        </div>
+
+        <div class="movie-card" data-id="act-8" data-title="Брудна гра" data-url="Брудна гра.html">
+            <a href="Брудна гра.html"><img src="images/image 70.png" alt=""></a>
+            <p>Брудна гра</p>
+        </div>
+
+        <div class="movie-card" data-id="act-9" data-title="Незламний" data-url="Незламний.html">
+            <a href="Незламний.html"><img src="images/image 71.png" alt=""></a>
+            <p>Незламний</p>
+        </div>
+
+        <div class="movie-card" data-id="act-10" data-title="Людина нізвідки" data-url="Людина нізвідки.html">
+            <a href="Людина нізвідки.html"><img src="images/image 72.png" alt=""></a>
+            <p>Людина нізвідки</p>
+        </div>
+
+        <div class="movie-card" data-id="act-11" data-title="Одним менше" data-url="Одним менше.html">
+            <a href="Одним менше.html"><img src="images/image 73.png" alt=""></a>
+            <p>Одним менше</p>
+        </div>
+        <div class="movie-card" data-id="act-12" data-title="Напарники мимоволі" data-url="Напарники мимоволі.html">
+            <a href="Напарники мимоволі.html"><img src="images/image 74.png" alt=""></a>
+            <p>Напарники мимоволі</p>
+        </div>
+
+        <div class="movie-card" data-id="act-13" data-title="Нокаут" data-url="Нокаут.html">
+            <a href="Нокаут.html"><img src="images/image 75.png" alt=""></a>
+            <p>Нокаут</p>
+        </div>
+
+        <div class="movie-card" data-id="act-14" data-title="Спустошення" data-url="Спустошення.html">
+            <a href="Спустошення.html"><img src="images/image 76.png" alt=""></a>
+            <p>Спустошення</p>
+        </div>
+
+        <div class="movie-card" data-id="act-15" data-title="Знову в дії" data-url="Знову в дії.html">
+            <a href="Знову в дії.html"><img src="images/image 77.png" alt=""></a>
+            <p>Знову в дії</p>
+        </div>
+
+        <div class="movie-card" data-id="act-16" data-title="Шлях відплати" data-url="Шлях відплати.html">
+            <a href="Шлях відплати.html"><img src="images/image 78.png" alt=""></a>
+            <p>Шлях відплати</p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section marvel">
+    <h1 class="section-title">Марвел</h1>
+
+    <div class="movie-carousel">
+
+        <div class="movie-card" data-id="mar-1" data-title="Фантастична четвірка: Перші кроки" data-url="Фантастична четвірка перші кроки.html">
+            <a href="Фантастична четвірка перші кроки.html">
+                <img src="images/image 86.png" alt="">
+            </a>
+            <p>Фантастична четвірка: Перші кроки</p>
+        </div>
+
+        <div class="movie-card" data-id="mar-2" data-title="Громовержці" data-url="Громовержці.html">
+            <a href="Громовержці.html"><img src="images/image 87.png" alt=""></a>
+            <p>Громовержці</p>
+        </div>
+
+        <div class="movie-card" data-id="mar-3" data-title="Капітан Америка: Новий світ" data-url="Капітан Америка Новий світ.html">
+            <a href="Капітан Америка Новий світ.html"><img src="images/image 88.png" alt=""></a>
+            <p>Капітан Америка: Новий світ</p>
+        </div>
+
+        <div class="movie-card" data-id="mar-4" data-title="Крейвен-мисливець" data-url="Крейвен хантер.html">
+            <a href="Крейвен хантер.html"><img src="images/image 89.png" alt=""></a>
+            <p>Крейвен-мисливець</p>
+        </div>
+
+        <div class="movie-card" data-id="mar-5" data-title="Веном: Останній танець" data-url="Веном останій танець.html">
+            <a href="Веном останій танець.html"><img src="images/image 90.png" alt=""></a>
+            <p>Веном: Останній танець</p>
+        </div>
+
+        <div class="movie-card" data-id="mar-6" data-title="Дедпул і Росомаха" data-url="Дедпул і Росомаха.html">
+            <a href="Дедпул і Росомаха.html"><img src="images/image 91.png" alt=""></a>
+            <p>Дедпул і Росомаха</p>
+        </div>
+
+        <div class="movie-card" data-id="mar-7" data-title="Мадам Павутина" data-url="Мадам ВЕБ.html">
+            <a href="Мадам ВЕБ.html"><img src="images/image 92.png" alt=""></a>
+            <p>Мадам Павутина</p>
+        </div>
+
+        <div class="movie-card" data-id="mar-8" data-title="Капітан Марвел 2" data-url="Капітан Марвел 2.html">
+            <a href="Капітан Марвел 2.html"><img src="images/image 94.png" alt=""></a>
+            <p>Капітан Марвел 2</p>
+        </div>
+
+        <div class="movie-card" data-id="mar-9" data-title="Вартові галактики 3" data-url="Вартові галактики 3.html">
+            <a href="Вартові галактики 3.html"><img src="images/image 95.png" alt=""></a>
+            <p>Вартові галактики 3</p>
+        </div>
+
+        <div class="movie-card" data-id="mar-10" data-title="Людина-мураха і Оса: Квантоманія" data-url="Людина мураха і оса квантоманія.html">
+            <a href="Людина мураха і оса квантоманія.html"><img src="images/image 96.png" alt=""></a>
+            <p>Людина-мураха і Оса: Квантоманія</p>
+        </div>
+        <div class="movie-card" data-id="mar-11" data-title="Тор: Любов і грім" data-url="Тор кохання і грім.html">
+            <a href="Тор кохання і грім.html"><img src="images/Thor_Love_and_Thunder_Russian_Poster 1.png" alt=""></a>
+            <p>Тор: Любов і грім</p>
+        </div>
+
+    </div>
+</section>
+
+</main>
+<footer class="footer">
+    <p class="footer-text">Твоя особиста бібліотека фільмів🎬</p>
+    <a href="#top" class="back-to-top" id="back-to-top-link">Повернутись нагору ↑</a>
+</footer>
+</body>
+</html>
+
+
+
+

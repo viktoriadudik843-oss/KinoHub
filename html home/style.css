@@ -1,0 +1,370 @@
+/* Загальні стилі */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+/* Обнулення стандартних відступів для заголовків */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Хедер */
+.header {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(to right, lch(8.95% 32.4 301.17), hsl(246, 30%, 44%), #7973a4);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+/* Логотип */
+.logo {
+    height: 150px; 
+    margin-top: 70px;
+    margin-right: 20px
+}
+
+
+/* переглянути пізніше і переглянуто*/
+.header-menu {
+    display: flex;
+    gap: 100px;
+    margin-right: 0px;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #9ed0e6;
+    color: #000;
+}
+
+/* Декоративні елементи */
+.header-decor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    object-fit: cover;
+}
+
+.header-icon {
+    height: 40px;
+}
+
+
+.search-section {
+   margin-left: 400px;
+     text-align: left;
+
+}
+
+.search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 250px;
+    margin-right: 0px;
+
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+
+
+
+
+/*сьогодні в кіно*/
+.cinema-today {
+  display: flex;               /* робить елементи в ряд */
+    flex-wrap: wrap;             /* переносить, якщо не влазить */
+    gap: -6px;  
+    
+}
+
+/* Список фільмів — В РЯДОК */
+.movie-list {
+    display: flex;               
+    flex-wrap: wrap;             
+    gap: 50px;                   
+}
+
+/* Картка фільму */
+.movie-card, .movie-item {
+    text-align: center;
+    width: 150px;                /* фіксована ширина */
+    transition: transform 0.3s;
+}
+
+.movie-card img, .movie-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Ефект при наведенні */
+.movie-card:hover, .movie-item:hover {
+    transform: scale(1.05);
+}
+
+/* Підпис під фільмом */
+figcaption, .movie-item h2 {
+    font-size: 16px;
+    color: #ddd;
+    margin-top: 8px;
+}
+
+/*популярне зараз*/
+
+.movie-card {
+  flex: 0 0 auto;
+  width: 160px;
+  scroll-snap-align: start;
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative; /* дозволяє позиціонувати .rank всередині */
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover img {
+  transform: scale(1.05);
+}
+
+.rank {
+  position: absolute;
+  bottom: 80px; 
+  right: 300px;
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 1);
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+
+
+.movie-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap; /* дозволяє переносити фільми на новий рядок, якщо не вміщаються */
+  gap: 5px; /* відстань між картками */
+ /* вирівнювання по центру */
+  padding: 20px;
+}
+
+.movie-card {
+  width: 160px; /* фіксована ширина картки */
+  text-align: center;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px; /* менший базовий розмір */
+  color: hwb(0 100% 0%);
+
+}
+
+/*карусель комедії/романтика   трилери   бойовики */
+.movie-carousel {
+    display: flex;
+    
+    /* !!! ГАРАНТУЄМО ГОРИЗОНТАЛЬНИЙ РЯДОК !!! */
+    flex-wrap: nowrap !important; 
+    
+    /* Дозволяємо прокрутку, коли вміст виходить за межі */
+    overflow-x: auto;
+    
+    gap: 60px; /* Відстань між картками */
+    scroll-snap-type: x mandatory;
+    padding: 0 20px 10px 20px; /* Внутрішній відступ для скролу та країв */
+}
+.movie-card {
+  flex: 0 0 auto;
+  width: 160px;
+  scroll-snap-align: start;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover img {
+  transform: scale(1.05);
+}
+
+.movie-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.movie-carousel::-webkit-scrollbar {
+  display: none;
+}
+.movie-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* =========================================
+   * СТИЛІ ДЛЯ ПІДВАЛУ (FOOTER) *
+   ========================================= */
+
+.footer {
+    /* Основне оформлення */
+    background-color: #1a1a1a; /* Темний або чорний фон */
+    color: #f0f0f083; /* Світлий текст */
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 3px solid hsl(246, 30%, 44%); /* Яскрава лінія зверху для відділення */
+    font-family: 'Poppins', sans-serif;
+    margin-top: 40px; /* Відступ від останньої секції контенту */
+}
+
+/* Стиль для основного тексту в підвалі */
+.footer-text {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Стилі для посилання "Повернутись нагору" */
+.back-to-top {
+    display: inline-block;
+    color: #1a1a1a; /* Темний текст */
+    background-color: #FFD700; /* Золотистий */
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: none;
+    cursor: pointer;
+
+    /* Плавні переходи для кількох властивостей */
+    transition: background-color 0.4s ease, 
+                transform 0.3s ease, 
+                box-shadow 0.3s ease;
+}
+
+/* Ефект при наведенні */
+.back-to-top:hover {
+    background-color: hsl(246, 30%, 44%); /* Темніший відтінок */
+    transform: translateY(-4px); /* Трохи більший підйом */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Легка тінь */
+}
+
+/* Ефект при наведенні миші на кнопку */
+.back-to-top:hover {
+    background-color: hsl(246, 30%, 44%); /* Трохи темніший золотистий */
+    transform: translateY(-2px); /* Невеликий підйом */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========================================= */
+
+
+
+
+
+/* СТИЛІ ДЛЯ ВКЛАДОК ТА КОНТЕНТУ ВКЛАДОК */
+.tab-content-container {
+    margin-top: 20px;
+}
+
+.tab-content-item {
+    display: none; /* приховано за замовчуванням */
+    padding: 20px;
+    border: 2px solid hsla(256, 33%, 73%, 0.718);
+    border-radius: 10px;
+    background: oklab(41.361% 0.01987 -0.06989 / 0.778);
+    min-height: 300px;
+    position: relative;
+}
+
+
+
+.tab-content-item.active {
+    display: block; /* показуємо активний блок */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.close-btn:hover {
+    background: #cc0000;
+}
+
+
+
+.menu-tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.menu-tab.active {
+    background: hsl(254, 12%, 49%);
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+
